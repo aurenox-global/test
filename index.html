@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -1523,7 +1524,7 @@
                     <option value="pl">🇵🇱 PL</option>
                     <option value="fr">🇫🇷 FR</option>
                 </select>
-                <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema" data-translate="theme-toggle-title" data-translate-attr="title">
+                <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
                     <i class="fas fa-moon" id="theme-icon"></i>
                 </button>
             </div>
@@ -1850,7 +1851,7 @@
                 <div>
                     <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Industria/Sector</label>
                     <select style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
-                        <option value="" data-translate="industry-placeholder">Selecciona tu industria</option>
+                        <option value="">Selecciona tu industria</option>
                         <option value="tecnologia">Tecnología</option>
                         <option value="salud">Salud</option>
                         <option value="finanzas">Finanzas</option>
@@ -1866,7 +1867,7 @@
                 <div>
                     <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Tamaño de la empresa</label>
                     <select style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
-                        <option value="" data-translate="company-size-placeholder">Selecciona el tamaño</option>
+                        <option value="">Selecciona el tamaño</option>
                         <option value="startup">Startup (1-10 empleados)</option>
                         <option value="pequena">Pequeña (11-50 empleados)</option>
                         <option value="mediana">Mediana (51-200 empleados)</option>
@@ -1877,13 +1878,13 @@
                 
                 <div>
                     <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">¿Qué procesos te gustaría optimizar con IA? *</label>
-                    <textarea required rows="4" style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; resize: vertical;" placeholder="Ej: Atención al cliente, análisis de datos, automatización de procesos, gestión de inventario, etc." data-translate="optimize-processes-ph" data-translate-attr="placeholder"></textarea>
+                    <textarea required rows="4" style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; resize: vertical;" placeholder="Ej: Atención al cliente, análisis de datos, automatización de procesos, gestión de inventario, etc."></textarea>
                 </div>
                 
                 <div>
                     <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Presupuesto aproximado para implementación IA</label>
                     <select style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
-                        <option value="" data-translate="budget-range-placeholder">Selecciona rango de presupuesto</option>
+                        <option value="">Selecciona rango de presupuesto</option>
                         <option value="3k-10k">$3,000 - $10,000 USD</option>
                         <option value="10k-25k">$10,000 - $25,000 USD</option>
                         <option value="25k-50k">$25,000 - $50,000 USD</option>
@@ -1980,7 +1981,7 @@
             
             <div style="text-align: center; margin-top: 2rem;">
                 <button style="background: linear-gradient(45deg, #667eea, #764ba2); color: white; border: none; padding: 1rem 2rem; border-radius: 25px; cursor: pointer; font-weight: 600;">
-                    <i class="fas fa-chart-bar"></i> <span data-translate="btn-more-use-cases">Ver Más Casos de Uso</span>
+                    <i class="fas fa-chart-bar"></i> Ver Más Casos de Uso
                 </button>
             </div>
         </div>
@@ -2016,10 +2017,10 @@
                 
                 <!-- Quick Actions -->
                 <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0 1rem; margin-bottom: 1rem;">
-                    <button class="quick-action" onclick="sendQuickMessage(translations[currentLanguage] ? translations[currentLanguage]['qa-price-msg'] : '¿Cuánto cuesta una auditoría IA?')" data-translate="qa-price-label">💰 Precios</button>
-                    <button class="quick-action" onclick="sendQuickMessage(translations[currentLanguage] ? translations[currentLanguage]['qa-services-msg'] : '¿Qué servicios ofrecen?')" data-translate="qa-services-label">🛠️ Servicios</button>
-                    <button class="quick-action" onclick="sendQuickMessage(translations[currentLanguage] ? translations[currentLanguage]['qa-schedule-msg'] : 'Quiero agendar una consulta')" data-translate="qa-schedule-label">📅 Agendar</button>
-                    <button class="quick-action" onclick="sendQuickMessage(translations[currentLanguage] ? translations[currentLanguage]['qa-cases-msg'] : 'Casos de éxito')" data-translate="qa-cases-label">🏆 Casos</button>
+                    <button class="quick-action" onclick="sendQuickMessage('¿Cuánto cuesta una auditoría IA?')">💰 Precios</button>
+                    <button class="quick-action" onclick="sendQuickMessage('¿Qué servicios ofrecen?')">🛠️ Servicios</button>
+                    <button class="quick-action" onclick="sendQuickMessage('Quiero agendar una consulta')">📅 Agendar</button>
+                    <button class="quick-action" onclick="sendQuickMessage('Casos de éxito')">🏆 Casos</button>
                 </div>
                 
                 <!-- Typing indicator (hidden by default) -->
@@ -2035,7 +2036,7 @@
                 
             <!-- Chat Input -->
             <div class="chatbot-input-area">
-                <input type="text" class="chatbot-input" id="chat-input" placeholder="Escribe tu pregunta aquí..." data-translate="chat-input-ph" data-translate-attr="placeholder" onkeypress="handleChatKeypress(event)">
+                <input type="text" class="chatbot-input" id="chat-input" placeholder="Escribe tu pregunta aquí..." onkeypress="handleChatKeypress(event)">
                 <button class="chatbot-send" onclick="sendChatMessage()">
                     <i class="fas fa-paper-plane"></i>
                 </button>
@@ -2397,7 +2398,7 @@
                 
                 <div style="margin-bottom: 1rem;">
                     <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Cargo/Posición *</label>
-                    <input type="text" required style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;" placeholder="CEO, CTO, Director de Operaciones..." data-translate="position-ph" data-translate-attr="placeholder">
+                    <input type="text" required style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;" placeholder="CEO, CTO, Director de Operaciones...">
                 </div>
                 
                 <div style="margin-bottom: 1rem;">
@@ -2540,7 +2541,7 @@
                 
                 <div style="margin-bottom: 1rem;">
                     <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Descripción del proyecto y objetivos</label>
-                    <textarea style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; height: 120px; resize: vertical;" placeholder="Describe qué quieres lograr con IA, problema específico a resolver, métricas de éxito esperadas..." data-translate="project-desc-ph" data-translate-attr="placeholder"></textarea>
+                    <textarea style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; height: 120px; resize: vertical;" placeholder="Describe qué quieres lograr con IA, problema específico a resolver, métricas de éxito esperadas..."></textarea>
                 </div>
                 
                 <!-- Métodos de Pago -->
@@ -2576,10 +2577,10 @@
     <!-- PWA Install Prompt -->
     <div id="install-prompt" class="install-prompt">
         <div>
-            <strong data-translate="install-title">📱 Instalar Aurenox-AI</strong><br>
-            <small data-translate="install-subtitle">Acceso rápido desde tu dispositivo</small>
+            <strong>📱 Instalar Aurenox-AI</strong><br>
+            <small>Acceso rápido desde tu dispositivo</small>
         </div>
-        <button id="install-button" data-translate="install-button">Instalar</button>
+        <button id="install-button">Instalar</button>
         <button onclick="dismissInstallPrompt()" style="background: transparent; border: none; color: white; margin-left: 0.5rem;">✕</button>
     </div>
 
@@ -2822,27 +2823,7 @@
                 'faq-q5': '¿Qué tecnologías de IA utilizan?',
                 'faq-a5': 'Utilizamos Python, TensorFlow, PyTorch, OpenAI API, Langchain, Hugging Face, AWS/Azure ML, y herramientas como ChatGPT, Claude y GitHub Copilot para desarrollo.',
                 'faq-q6': '¿Cómo empezar con IA en mi empresa?',
-                'faq-a6': 'Comenzamos con una auditoría para identificar oportunidades de IA en tu negocio. Luego creamos una hoja de ruta personalizada con implementación por fases y ROI medible.',
-                'theme-toggle-title': 'Cambiar tema',
-                'chat-input-ph': 'Escribe tu pregunta aquí...',
-                'industry-placeholder': 'Selecciona tu industria',
-                'company-size-placeholder': 'Selecciona el tamaño',
-                'optimize-processes-ph': 'Ej: Atención al cliente, análisis de datos, automatización de procesos, gestión de inventario, etc.',
-                'budget-range-placeholder': 'Selecciona rango de presupuesto',
-                'btn-more-use-cases': 'Ver Más Casos de Uso',
-                'qa-price-label': '💰 Precios',
-                'qa-services-label': '🛠️ Servicios',
-                'qa-schedule-label': '📅 Agendar',
-                'qa-cases-label': '🏆 Casos',
-                'qa-price-msg': '¿Cuánto cuesta una auditoría IA?',
-                'qa-services-msg': '¿Qué servicios ofrecen?',
-                'qa-schedule-msg': 'Quiero agendar una consulta',
-                'qa-cases-msg': 'Casos de éxito',
-                'position-ph': 'CEO, CTO, Director de Operaciones...',
-                'project-desc-ph': 'Describe qué quieres lograr con IA, problema específico a resolver, métricas de éxito esperadas...',
-                'install-title': '📱 Instalar Aurenox-AI',
-                'install-subtitle': 'Acceso rápido desde tu dispositivo',
-                'install-button': 'Instalar'
+                'faq-a6': 'Comenzamos con una auditoría para identificar oportunidades de IA en tu negocio. Luego creamos una hoja de ruta personalizada con implementación por fases y ROI medible.'
             },
             en: {
                 'hero-title': 'Welcome to <span style="color: #ffa500;">Aurenox-AI</span>',
@@ -2907,27 +2888,7 @@
                 'faq-q5': 'What AI technologies do you use?',
                 'faq-a5': 'We use Python, TensorFlow, PyTorch, OpenAI API, Langchain, Hugging Face, AWS/Azure ML, and tools like ChatGPT, Claude and GitHub Copilot for development.',
                 'faq-q6': 'How to start with AI in my company?',
-                'faq-a6': 'We start with an audit to identify AI opportunities in your business. Then we create a personalized roadmap with phased implementation and measurable ROI.',
-                'theme-toggle-title': 'Toggle theme',
-                'chat-input-ph': 'Type your question here...',
-                'industry-placeholder': 'Select your industry',
-                'company-size-placeholder': 'Select company size',
-                'optimize-processes-ph': 'E.g.: Customer support, data analysis, process automation, inventory management, etc.',
-                'budget-range-placeholder': 'Select budget range',
-                'btn-more-use-cases': 'See More Use Cases',
-                'qa-price-label': '💰 Pricing',
-                'qa-services-label': '🛠️ Services',
-                'qa-schedule-label': '📅 Schedule',
-                'qa-cases-label': '🏆 Cases',
-                'qa-price-msg': 'How much does an AI audit cost?',
-                'qa-services-msg': 'What services do you offer?',
-                'qa-schedule-msg': 'I want to schedule a consultation',
-                'qa-cases-msg': 'Success stories',
-                'position-ph': 'CEO, CTO, COO...',
-                'project-desc-ph': 'Describe what you want to achieve with AI, specific problem to solve, expected success metrics...',
-                'install-title': '📱 Install Aurenox-AI',
-                'install-subtitle': 'Quick access from your device',
-                'install-button': 'Install'
+                'faq-a6': 'We start with an audit to identify AI opportunities in your business. Then we create a personalized roadmap with phased implementation and measurable ROI.'
             },
             de: {
                 'hero-title': 'Willkommen bei <span style="color: #ffa500;">Aurenox-AI</span>',
@@ -2992,27 +2953,7 @@
                 'faq-q5': 'Welche KI-Technologien verwenden Sie?',
                 'faq-a5': 'Wir verwenden Python, TensorFlow, PyTorch, OpenAI API, Langchain, Hugging Face, AWS/Azure ML und Tools wie ChatGPT, Claude und GitHub Copilot für die Entwicklung.',
                 'faq-q6': 'Wie beginne ich mit KI in meinem Unternehmen?',
-                'faq-a6': 'Wir beginnen mit einem Audit, um KI-Möglichkeiten in Ihrem Unternehmen zu identifizieren. Dann erstellen wir eine personalisierte Roadmap mit phasenweiser Implementierung und messbarem ROI.',
-                'theme-toggle-title': 'Theme wechseln',
-                'chat-input-ph': 'Tippen Sie Ihre Frage hier ein...',
-                'industry-placeholder': 'Wählen Sie Ihre Branche',
-                'company-size-placeholder': 'Firmengröße auswählen',
-                'optimize-processes-ph': 'Z. B.: Kundensupport, Datenanalyse, Prozessautomatisierung, Bestandsmanagement, etc.',
-                'budget-range-placeholder': 'Budgetbereich auswählen',
-                'btn-more-use-cases': 'Mehr Anwendungsfälle anzeigen',
-                'qa-price-label': '💰 Preise',
-                'qa-services-label': '🛠️ Dienstleistungen',
-                'qa-schedule-label': '📅 Termin',
-                'qa-cases-label': '🏆 Fälle',
-                'qa-price-msg': 'Was kostet ein KI-Audit?',
-                'qa-services-msg': 'Welche Dienstleistungen bieten Sie an?',
-                'qa-schedule-msg': 'Ich möchte einen Termin vereinbaren',
-                'qa-cases-msg': 'Erfolgsgeschichten',
-                'position-ph': 'CEO, CTO, Betriebsleiter...',
-                'project-desc-ph': 'Beschreiben Sie, was Sie mit KI erreichen wollen, spezifisches Problem, erwartete Erfolgskennzahlen...',
-                'install-title': '📱 Aurenox-AI installieren',
-                'install-subtitle': 'Schneller Zugriff von Ihrem Gerät',
-                'install-button': 'Installieren'
+                'faq-a6': 'Wir beginnen mit einem Audit, um KI-Möglichkeiten in Ihrem Unternehmen zu identifizieren. Dann erstellen wir eine personalisierte Roadmap mit phasenweiser Implementierung und messbarem ROI.'
             },
             pl: {
                 'hero-title': 'Witamy w <span style="color: #ffa500;">Aurenox-AI</span>',
@@ -3077,27 +3018,7 @@
                 'faq-q5': 'Jakich technologii AI używacie?',
                 'faq-a5': 'Używamy Python, TensorFlow, PyTorch, OpenAI API, Langchain, Hugging Face, AWS/Azure ML i narzędzi takich jak ChatGPT, Claude i GitHub Copilot do rozwoju.',
                 'faq-q6': 'Jak zacząć z AI w mojej firmie?',
-                'faq-a6': 'Zaczynamy od audytu, aby zidentyfikować możliwości AI w Twoim biznesie. Następnie tworzymy spersonalizowaną mapę drogową z etapowym wdrażaniem i mierzalnym ROI.',
-                'theme-toggle-title': 'Zmień motyw',
-                'chat-input-ph': 'Wpisz tutaj swoje pytanie...',
-                'industry-placeholder': 'Wybierz branżę',
-                'company-size-placeholder': 'Wybierz wielkość firmy',
-                'optimize-processes-ph': 'Np.: Obsługa klienta, analiza danych, automatyzacja procesów, zarządzanie zapasami itp.',
-                'budget-range-placeholder': 'Wybierz zakres budżetu',
-                'btn-more-use-cases': 'Zobacz więcej przypadków użycia',
-                'qa-price-label': '💰 Cennik',
-                'qa-services-label': '🛠️ Usługi',
-                'qa-schedule-label': '📅 Umów',
-                'qa-cases-label': '🏆 Przypadki',
-                'qa-price-msg': 'Ile kosztuje audyt AI?',
-                'qa-services-msg': 'Jakie usługi oferujecie?',
-                'qa-schedule-msg': 'Chcę umówić konsultację',
-                'qa-cases-msg': 'Studia przypadków',
-                'position-ph': 'CEO, CTO, Dyrektor operacyjny...',
-                'project-desc-ph': 'Opisz, co chcesz osiągnąć dzięki AI, konkretny problem do rozwiązania, oczekiwane metryki sukcesu...',
-                'install-title': '📱 Zainstaluj Aurenox-AI',
-                'install-subtitle': 'Szybki dostęp z Twojego urządzenia',
-                'install-button': 'Zainstaluj'
+                'faq-a6': 'Zaczynamy od audytu, aby zidentyfikować możliwości AI w Twoim biznesie. Następnie tworzymy spersonalizowaną mapę drogową z etapowym wdrażaniem i mierzalnym ROI.'
             },
             fr: {
                 'hero-title': 'Bienvenue chez <span style="color: #ffa500;">Aurenox-AI</span>',
@@ -3162,64 +3083,25 @@
                 'faq-q5': 'Quelles technologies IA utilisez-vous?',
                 'faq-a5': 'Nous utilisons Python, TensorFlow, PyTorch, OpenAI API, Langchain, Hugging Face, AWS/Azure ML et des outils comme ChatGPT, Claude et GitHub Copilot pour le développement.',
                 'faq-q6': 'Comment commencer avec l\'IA dans mon entreprise?',
-                'faq-a6': 'Nous commençons par un audit pour identifier les opportunités IA dans votre entreprise. Ensuite nous créons une feuille de route personnalisée avec implémentation par phases et ROI mesurable.',
-                'theme-toggle-title': 'Changer le thème',
-                'chat-input-ph': 'Tapez votre question ici...',
-                'industry-placeholder': 'Sélectionnez votre secteur',
-                'company-size-placeholder': 'Sélectionnez la taille de l’entreprise',
-                'optimize-processes-ph': 'Ex.: Support client, analyse de données, automatisation des processus, gestion des stocks, etc.',
-                'budget-range-placeholder': 'Sélectionnez une fourchette de budget',
-                'btn-more-use-cases': 'Voir plus de cas d’usage',
-                'qa-price-label': '💰 Tarifs',
-                'qa-services-label': '🛠️ Services',
-                'qa-schedule-label': '📅 Planifier',
-                'qa-cases-label': '🏆 Cas',
-                'qa-price-msg': 'Combien coûte un audit IA ?',
-                'qa-services-msg': 'Quels services proposez-vous ?',
-                'qa-schedule-msg': 'Je veux planifier une consultation',
-                'qa-cases-msg': 'Études de cas',
-                'position-ph': 'CEO, CTO, Directeur des opérations...',
-                'project-desc-ph': 'Décrivez ce que vous souhaitez réaliser avec l’IA, le problème spécifique à résoudre, les indicateurs de succès attendus...',
-                'install-title': '📱 Installer Aurenox-AI',
-                'install-subtitle': 'Accès rapide depuis votre appareil',
-                'install-button': 'Installer'
+                'faq-a6': 'Nous commençons par un audit pour identifier les opportunités IA dans votre entreprise. Ensuite nous créons une feuille de route personnalisée avec implémentation par phases et ROI mesurable.'
             }
         };
 
         // Language change functionality
-        let currentLanguage = 'es';
-
         function changeLanguage(language) {
             const elements = document.querySelectorAll('[data-translate]');
-
+            
             elements.forEach(element => {
                 const key = element.getAttribute('data-translate');
-                const value = translations[language] && translations[language][key];
-                if (!value) return;
-                const isHtmlElement = element.tagName === 'H1' || element.tagName === 'H2' || key.includes('title');
-                const containsIcon = element.querySelector && element.querySelector('i, svg');
-                if (isHtmlElement || containsIcon) {
-                    element.innerHTML = value;
-                } else {
-                    element.textContent = value;
+                if (translations[language] && translations[language][key]) {
+                    if (element.tagName === 'H1' || element.tagName === 'H2' || key.includes('title')) {
+                        element.innerHTML = translations[language][key];
+                    } else {
+                        element.textContent = translations[language][key];
+                    }
                 }
             });
-
-            // Translate attributes like placeholder/title where specified
-            const attrElements = document.querySelectorAll('[data-translate-attr]');
-            attrElements.forEach(element => {
-                const attrKey = element.getAttribute('data-translate');
-                const attrName = element.getAttribute('data-translate-attr');
-                if (attrKey && attrName && translations[language] && translations[language][attrKey]) {
-                    element.setAttribute(attrName, translations[language][attrKey]);
-                }
-            });
-
-            // Update document language
-            document.documentElement.setAttribute('lang', language);
-
-            // Persist and expose current language
-            currentLanguage = language;
+            
             localStorage.setItem('language', language);
         }
 
